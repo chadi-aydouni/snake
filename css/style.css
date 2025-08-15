@@ -1,0 +1,207 @@
+/* Aydouni Chadi - 43729 - B111 
+
+Couleurs
+    Bleu-gris : #171a1f
+    Bleu marin : #29395a
+    Bleu foncé : #30353f
+    Vert fluo : #a3c038
+    Vert foncé : #376648
+    Gris clair : #b4b5af
+    Gris foncé : #8c8d87
+*/
+
+@font-face{
+    font-family: "neoletters";
+    src : url(fonts/neoletters.ttf);
+}
+
+@font-face{
+    font-family: "robotoMedium";
+    src : url(fonts/Roboto-Medium.ttf);
+}
+
+@font-face{
+    font-family: "robotoRegular";
+    src : url(fonts/Roboto-Regular.ttf);
+}
+
+body{
+    display : grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    grid-template-rows : auto 1fr auto;
+    background-color: #171a1f;
+    height: 100vh;
+    font-family: robotoMedium;
+	margin: auto;
+}
+
+/* Header */
+
+header{
+    grid-area : header;
+
+    display:flex;
+	align-items : center;
+    justify-content : center;
+
+    background-color: #171a1f;
+    background-image: url(images/pattern.png);
+
+    font-family: neoletters;
+    color: #a3c038;
+    text-shadow: 0.1em 0.1em #376648;
+    font-size: 2vw;
+
+    padding-top:0.5em;
+    
+}
+
+header h1{
+    margin: 0em;
+}
+
+/* Partie centrale */
+
+main{
+    grid-area : main;
+    display: grid;
+    grid-template-areas:
+    "leftSide rightSide";
+    grid-template-columns : 60% auto;
+    
+    background-color: #b4b5af;
+}
+
+/* Plateau */
+
+#leftSide{
+    grid-area : leftSide;
+    background-color : #8c8d87;
+    border-right : dotted thin #171a1f;
+    padding: 2em;
+
+    display : flex;
+    align-items : center;
+    justify-content : center;
+}
+
+#board{
+    display : grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    grid-gap: 5px;
+    width: 40em;
+}
+
+.cell{
+    background-color: #a3c038;
+}
+
+/* Permet de garder une case parfaitement carrée. */
+.cell:after{
+    content:"";
+    display: block;
+    margin-top: 100%;
+}
+
+/* L'ordre est important en cas d'échec : ici, la tête s'affichera bien au dessus du corps mordu. */
+.snakeBody{
+    background-color: #0c7a55;
+}
+
+.fruit{
+    background-color: #dadada;
+}
+
+.snakeHead{
+    background-color: #07c082;
+}
+
+/* Score */
+
+#rightSide{
+    grid-area : rightSide;
+    
+    display: flex;
+    flex-direction: column;
+    align-items : center;
+    justify-content : center;
+
+    font-size: 4em;
+    text-align: center;
+    color: #171a1f;
+
+    padding: 1em;
+}
+
+    /* Meilleur score */
+#bestScore{
+    border-bottom: thin dotted #171a1f;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+#bestScoreValue{
+    color: #8d8d8d;
+}
+
+    /* Score actuel */
+#actualScore{
+    text-transform: uppercase;
+}
+
+.actualScoreValue{
+    color: #376648;
+}
+
+    /* Messages de fin */
+#endMessage{
+    margin-top: 0.5em;
+    color: #30353f;
+    display: none;
+}
+
+#bestScoreMessage{
+    color: #374a66;
+    font-size: 2rem;
+    display: none;
+}
+
+    /* Bouton */
+#restartButton{
+    display: none;
+
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+
+    outline: none;
+    border : none;
+    border-radius: 10px 10px;
+    background-color: #30353f;
+    
+    padding: 15px 30px;
+    margin-top: 0.5em;
+
+    transition-duration: 0.3s;
+}
+
+#restartButton:hover{
+    background-color: #171a1f;
+}
+
+/* Footer */
+
+footer{
+    grid-area : footer;
+
+    background-color: #171a1f;
+    text-align: center;
+    color : white;
+
+    padding: 0.5em;
+}

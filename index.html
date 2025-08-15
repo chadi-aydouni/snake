@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Aydouni Chadi - 43729">
+    <meta name="keywords" content="jeu">
+    <meta name="description" content="Page du jeu">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="css/images/favicon.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>SNAKE : ne vous mordez pas la queue!</title>
+    <!-- Aydouni Chadi - 43729 - B111 -->
+</head>
+
+<body>
+    <header>
+        <h1>Snake</h1>
+    </header>
+
+    <main>
+        <div id="leftSide">
+            <div id="board"></div>
+        </div>
+        <div id="rightSide">
+            <div id="bestScore">Meilleur score : <span id="bestScoreValue"></span></div>
+
+            <div id="actualScore">Score : <span class="actualScoreValue"></span></div>
+
+            <div id="endMessage">Vous avez fait un score de <span class="actualScoreValue">0</span> points.
+                <div id="bestScoreMessage">Bravo, vous avez battu le meilleur score !</div>
+            </div>
+
+            <button id="restartButton" onclick="window.location.reload()">Rejouer</button>
+        </div>
+    </main>
+
+    <footer>
+        Aydouni Chadi - 43729 - B111
+    </footer>
+
+    <!-- Import des classes -->
+    <script src="js/model/Position.js"></script>
+    <script src="js/model/Snake.js"></script>
+    <script src="js/model/Board.js"></script>
+    <script src="js/model/Fruit.js"></script>
+
+    <script src="js/view/view.js"></script>
+    <script src="js/controller/controller.js"></script>
+</body>
+
+</html>

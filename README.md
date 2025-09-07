@@ -1,16 +1,15 @@
-# 🐍 Snake
+# Snake
 
-A simple **Snake game** built with **HTML, CSS, and JavaScript** as a first school project to practice and get familiar with these web technologies.
+Snake game developed as part of the WEBG2 course at HE2B ESI (2018-2019) in HTML, CSS, and JavaScript, to familiarize students with these web technologies
 
 
-## 🛠️ Installation
+## Installation
 
 No installation needed.\
 Just open the `index.html` file in your browser or browse https://chadi-aydouni.github.io/snake/
 
 
-## ▶️ Usage
+##  Usage
 
 - **Arrow keys** to move the snake
-- **Eat the food** to grow and increase your score
-- **Avoid hitting yourself**
+- **Eat the food** to grow and increase your score and **avoid hitting yourself**

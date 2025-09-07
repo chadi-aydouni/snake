@@ -1,4 +1,4 @@
-# Snake
+# Snake - HTML/CSS/JS
 
 Snake game developed as part of the WEBG2 course at HE2B ESI (2018-2019) in HTML, CSS, and JavaScript, to familiarize students with these web technologies
 
